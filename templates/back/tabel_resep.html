@@ -1,0 +1,117 @@
+{% comment %} {% extends 'back/base.html' %}
+
+{% block content %}
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="toolbar">
+                            <a class="btn btn-sm btm-danger" href="{% url 'sinkron_berita' %}">Sinkron Berita</a> &nbsp;&nbsp;&nbsp;
+                            <!--Here you can write extra buttons/actions for the toolbar-->
+                        </div>
+                        <table id="bootstrap-table" class="table">
+                            <thead>
+                                <th data-field="state" data-checkbox="true">#</th>
+                                <th data-field="idMeal" class="text-center">idMeal</th>
+                                <th data-field="title" data-sortable="true">strMeal</th>
+                                <th data-field="strdrinkalternate" data-sortable="true">strDrinkAlternate</th>
+                                <th data-field="strcategory" data-sortable="true">strCategory</th>
+                                <th data-field="strArea" data-sortable="true">strArea</th>
+                                <th data-field="strintructions">strInturctions</th>
+                                <th data-field="strtags">strTags</th>
+                                <th data-field="stryoutube">strYoutube</th>
+                                <th data-field="stringredient1">strIngredient1</th>
+                                <th data-field="stringredient2">strIngredient2</th>
+                                <th data-field="stringredient3">strIngredient3</th>
+                                <th data-field="stringredient4">strIngredient4</th>
+                                <th data-field="stringredient5">strIngredient5</th>
+                                <th data-field="stringredient6">strIngredient6</th>
+                                <th data-field="stringredient7">strIngredient7</th>
+                                <th data-field="stringredient8">strIngredient8</th>
+                                <th data-field="stringredient9">strIngredient9</th>
+                                <th data-field="stringredient10">stIngredient10</th>
+                                <th data-field="stringredient11">stIngredient11</th>
+                                <th data-field="stringredient12">stIngredient12</th>
+                                <th data-field="stringredient13">stIngredient13</th>
+                                <th data-field="strmeasure1">strMeasure1</th>
+                                <th data-field="strmeasure2">strMeasure2</th>
+                                <th data-field="strmeasure3">strMeasure3</th>
+                                <th data-field="strmeasure4">strMeasure4</th>
+                                <th data-field="strmeasure5">strMeasure5</th>
+                                <th data-field="strmeasure6">strMeasure6</th>
+                                <th data-field="strmeasure7">strMeasure7</th>
+                                <th data-field="strmeasure8">strMeasure8</th>
+                                <th data-field="strmeasure9">strMeasure9</th>
+                                <th data-field="strmeasure10">stMeasure10</th>
+                                <th data-field="strmeasure11">stMeasure11</th>
+                                <th data-field="strmeasure12">stMeasure12</th>
+                                <th data-field="strmeasure13">stMeasure13</th>
+                                <th data-field="strSource">strSource</th>
+                                <th data-field="strImageSource">strImageSource</th>
+                                <th data-field="strcreativecommonsconfirmed">strComonsConfirmed</th>
+                                <th data-field="datemodified">dateModified</th>
+                                <th data-field="strmealthumb">strMealThumb</th>
+                            </thead>
+                            <tbody>
+
+                                {% for a in resep %}
+                                <tr>
+                                    <td></td>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{a.idmeal}}</td>
+                                    <td>{{a.strmeal}}</td>
+                                    <td>{{a.strdrinkalternate}}</td>
+                                    <td>{{a.strcategory}}</td>
+                                    <td>{{a.strarea}}</td>
+                                    <td>{{a.strinstructions}}</td>
+                                    <td>{{a.strtags}}</td>
+                                    <td>{{a.youtube}}</td>
+                                    <td>{{a.ingredeint1}}</td>
+                                    <td>{{a.ingredient2}}</td>
+                                    <td>{{a.ingredient3}}</td>
+                                    <td>{{a.ingredient4}}</td>
+                                    <td>{{a.ingredient5}}</td>
+                                    <td>{{a.ingredient6}}</td>
+                                    <td>{{a.ingredient7}}</td>
+                                    <td>{{a.ingredient8}}</td>
+                                    <td>{{a.ingredient9}}</td>
+                                    <td>{{a.ingredient10}}</td>
+                                    <td>{{a.ingredient11}}</td>
+                                    <td>{{a.ingredient12}}</td>
+                                    <td>{{a.ingredient13}}</td>
+                                    <td>{{a.strmeasure1}}</td>
+                                    <td>{{a.strmeasure2}}</td>
+                                    <td>{{a.strmeasure3}}</td>
+                                    <td>{{a.strmeasure4}}</td>
+                                    <td>{{a.strmeasure5}}</td>
+                                    <td>{{a.strmeasure6}}</td>
+                                    <td>{{a.strmeasure7}}</td>
+                                    <td>{{a.strmeasure8}}</td>
+                                    <td>{{a.strmeasure9}}</td>
+                                    <td>{{a.strmeasure10}}</td>
+                                    <td>{{a.strmeasure11}}</td>
+                                    <td>{{a.strmeasure12}}</td>
+                                    <td>{{a.strmeasure13}}</td>
+                                    <td>{{a.strsource}}</td>
+                                    <td>{{a.strimagesource}}</td>
+                                    <td>{{a.strcreativecommonsconfirmed}}</td>
+                                    <td>{{a.datemodified}}</td>
+                                    <td>{{a.strmealthumb}}</td>
+                                    <td>
+                                        <a class="btn btn-sm btn-info" href="">Detail</a>
+                                        <a class="btn btn-sm btn-primary" href="">Edit</a>
+                                        <a onclick="return confirm('Are you sure you want to delete?');" class="btn btn-sm btn-danger" href="">Delete</a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!--  end card  -->
+            </div> <!-- end col-md-12 -->
+        </div> <!-- end row -->
+    </div>
+</div>
+{% endblock content %} {% endcomment %}

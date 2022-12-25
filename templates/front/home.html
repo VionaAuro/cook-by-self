@@ -1,0 +1,79 @@
+{% extends 'front/base.html' %}
+
+{% load static  %}
+
+{% block content %}
+
+
+<div class="wrapper">
+    <div class="parallax filter-black">
+        <div class="parallax-image">
+            <img src="{% static 'front/img/awal.jpg' %}" alt="..." />
+        </div>
+        <div class="small-info">
+            <h1>Wanna Cook?</h1>
+            <h3>Expensive Taste for Your Tounge and Tummy</h3>
+        </div>
+    </div> 
+
+    <div class="section section-description">
+           <div class="container">
+               <h2 class="section-title">Hidangan Mahal</h2>
+
+               <div class="row">
+                    <div class="col-md-6">
+                       <h5>Hidangan Mahal</h5>
+                       <p>
+                        Hidangan Mahal adalah sajian makanan yang dicirikan dengan penyiapan bahan-bahan, teknik, dan percampuran yang khas yang biasanya dikaitkan dengan suatu budaya atau wilayah geografis tertentu.
+Namun, ada beberapa faktor yang mempengaruhi mahal dan eksklusifnya sebuah hidangan. Selain tampilan yang cantik, makanan yang disajikan  umumnya terbuat dari bahan-bahan berkualitas dengan harga yang pastinya tidak murah. Kemudian, biasanya bahan-bahan tersebut tersedia dalam jumlah yang terbatas dan tidak bisa didapatkan di sembarang tempat. </p>
+
+                        <p> Adapun beberapa makanan mahal dapat dimakan langsung seperti Yubari King Melon ataupun dijadikan referensi bahan makanan seperti Truffle dan Kaviar. </p>
+
+                   </div>
+                   <div class="col-md-6">
+                        <div id="description-carousel" class="carousel fade" data-ride="carousel">
+                              <!-- Wrapper for slides -->
+                              <div class="carousel-inner">
+                                <div class="item active">
+                                  <img src="{% static 'front/img/s.jpg' %}" alt="..." />
+                                </div>
+                                <div class="item">
+                                  <img src="{% static 'front/img/satu.jpg' %}" alt="..." />
+                                </div>
+                                <div class="item">
+                                  <img src="{% static 'front/img/aduk.jpg' %}" alt="..." />
+                                </div>
+                              </div>
+
+                              <ol class="carousel-indicators">
+                                <li data-target="#description-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#description-carousel" data-slide-to="1"></li>
+                                <li data-target="#description-carousel" data-slide-to="2"></li>
+                              </ol>
+                        </div>
+                   </div>
+                </div>
+
+                <div class="space-50"></div>
+                <hr>
+                <div class="space-50"></div>
+
+                <div class="row">
+                   <div class="col-md-6">
+                      <div class="img-container">
+                          <img src="{% static 'front/img/oyster3.jpg' %}" alt="..." />
+                      </div>
+                   </div>
+                   <div class="col-md-6">
+                       <h5>Coffin Bay King Oysters</h5>
+                       <p>
+                        Salah satu Hidangan Mahal adalah Coffin Bay King Oysters atau disebut juga dengan tiram ialah moluska bivalvia yang hidup di perairan pantai beriklim sedang dan hangat. </p>
+                        <p>
+                            Oyster kerap sekali dimakan mentah. Tiram ini membutuhkan waktu 6 sampai 7 tahun untuk tumbuh. Setiap 1 kilonya dijual seharga 77 dollar atau sekitar Rp 1,1 juta rupiah. </p>
+    
+                   </div>
+               </div>
+           </div>
+    </div><!-- section -->
+</div> <!-- wrapper -->
+{% endblock content %}

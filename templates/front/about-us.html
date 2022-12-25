@@ -1,0 +1,69 @@
+{% extends 'front/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="wrapper">
+    <div class="parallax filter-black">
+        <div class="parallax-image">
+            <img src="{%static 'front/img/pp3.jpg' %}">
+        </div>
+        <div class="small-info">
+            <h1>About Us</h1>
+            <h3>More Info?</h3>
+        </div>
+    </div>
+
+    <div class="section">
+           <div class="container">
+               <h2 class="section-title">For Your Information</h2>
+               <div class="row">
+                   <div class="col-md-6">
+                       <p>
+                        Pastikan untuk mendaftar dan melihat-lihat apa pun yang mungkin memberi informasi tambahan kepada Anda dan tanyakan kepada tim kapan pun Anda melihat sesuatu yang hilang. </p>
+                   </div>
+                     <div class="col-md-6">
+                       <p>Tim berjanji untuk mengerahkan seluruh waktu dan upayanya untuk menyediakan konten buatan tangan yang akan membuat Anda jatuh cinta dan membuat Anda kembali lagi setiap kali Anda memulai proyek baru.</p>
+                       <p>
+
+                        Apakah Anda sudah merasa terbantu?</p>
+                   </div>
+               </div>
+           </div>
+    </div><!-- section -->
+
+    <div class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Meet Myself <small> </small></h2>
+            <div class="team-presentation">
+                <center><div class="row">
+                    <div class="col-md-4">
+                        <div class="card card-user">
+                            <div class="image">
+                                <img src="{%static 'front/img/pp.jpg' %}">
+                            </div>
+                            <div class="content">
+                                <div class="author">
+                                    <a href="#">
+                                    <img class="avatar" src="{%static 'front/img/vio.jpg' %}" alt="..."/>
+                                    <h4 class="title">Viona Auro Islamianda<br />
+                                        <small>Mahasiswa</small>
+                                    </h4>
+                                    </a>
+                                </div>
+                                <p class="description text-center">
+                                    <i class="fa fa-map-marker fa-fw text-muted"></i> Samarinda, Kalimantan Timur <br/>
+                                    <i class="fa fa-envelope-o fa-fw text-muted"></i> vionaislamianda@yahoo.com
+                                </p>
+                            </div>
+                            <hr>
+                            <div class="text-center">
+                                <button href="#" class="btn btn-social btn-google btn-simple"><i class="fa fa-google-plus-square"></i></button>
+                            </div>
+                        </div> <!-- end card-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end section meet myself -->
+</div> <!-- wrapper -->
+{% endblock content %}

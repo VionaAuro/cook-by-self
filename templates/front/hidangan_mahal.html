@@ -1,0 +1,38 @@
+{% extends 'front/base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="wrapper">
+    <div class="parallax filter-black">
+        <div class="parallax-image">
+            <img src="{%static 'front/img/b3.jpg' %}" alt="..." />
+        </div>
+        <div class="small-info">
+            <h1>Hidangan Mahal</h1>
+            <h3>For Your Expensive Taste.</h3>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="container">
+            <h2 class="section-title">Referensi Resep</h2>
+            <div class="row">
+                {% for a in artikel %}
+                <div class="card"> 
+                    <h4 class="fw-bolder">{{a.nama}}</h4>
+                    <div class="card-body">
+                    <h2 class="fw-bold">{{a.judul}}</h2>  
+                      <p class="card-text">{{a.body}}</p>
+
+                      <div class="badge bg-primary text-wrap" style="width: 10rem;">
+                        {{a.kategori}}
+                      </div>
+                    </div>
+                  </div>
+            {% endfor %}
+            </div>
+        </div>
+ </div><!-- section -->
+</div> <!-- wrapper -->
+{% endblock content %}

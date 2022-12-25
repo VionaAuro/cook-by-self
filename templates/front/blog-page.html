@@ -1,0 +1,55 @@
+{% extends 'front/base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="wrapper">
+    <div class="parallax filter-black">
+        <div class="parallax-image">
+            <img src="{%static 'front/img/books2.jpg' %}" alt="..." />
+        </div>
+        <div class="small-info">
+            <h1>Resep Umum</h1>
+            <h3>Temukan Kreasi Hidangan Favoritmu</h3>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="container">
+            <h2 class="section-title">Resep Umum</h2>
+            <div class="row">
+                {% for idMeal, strMeal, strDrinkAlternate, strCategory, strArea, strInstructions, strTags, strYoutube, strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5, strIngredient6, strIngredient7, strIngredient8, strIngredient9, strIngredient10, strIngredient11, strIngredient12, strIngredient13, strMeasure1, strMeasure2, strMeasure3, strMeasure4, strMeasure5, strMeasure6, strMeasure7, strMeasure8, strMeasure9, strMeasure10, strMeasure11, strMeasure12, strMeasure13, strSource, strImageSource, strCreativeCommonsConfirmed, dateModified, i in mylist%}
+                 <div class="col-md-4">
+                     <div class="card card-plain">
+                         <div class="image">
+                             <img src="{{i}}" alt="..." />
+                             <div class="filter filter-white">
+                                 <a href= "{{strSource}}" type="button" class="btn btn-info btn-round btn-fill">
+                                     <i class="fa fa-heart"></i> Bookmarked
+                                 </a>
+                             </div>
+                         </div>
+                         <div class="content">
+                             <p class="category">{{strCategory}}</p>
+                             <a class="card-link" href="#">
+                                 <h4 class="title">{{strMeal}}</h4>
+                             </a>
+                              <div class="footer">
+                                 <div class="author">
+                                     <a class="card-link" href="#">
+                                        <span> {{strArea}} </span>
+                                     </a>
+                                 </div>
+                                 <div class="stats pull-right">
+                                     <i class="fa fa-clock-o"></i> {{strTags}}
+                                 </div>
+                             </div>
+                         </div>
+                     </div> <!-- end card -->
+                 </div>
+                 {% endfor %}
+            </div>
+        </div>
+ </div><!-- section -->
+</div> <!-- wrapper -->
+{% endblock content %}
